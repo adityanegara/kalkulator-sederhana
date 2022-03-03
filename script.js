@@ -12,7 +12,6 @@ addButton.addEventListener('click', () =>{
     }else{
         alert('Input Tidak Valid');
     }
- 
 });
 
 const validation = (inputOne, inputTwo) =>{
