@@ -6,16 +6,15 @@ const result = document.getElementById('result');
 addButton.addEventListener('click', () =>{
     const inputOneValue = inputOne.value;
     const inputTwoValue = inputTwo.value;
-    if(validation(inputOneValue, inputTwoValue)){
+    if(validation(inputOneValue, inputTwoValue) === true){
         const addedResult = parseInt(inputOneValue) + parseInt(inputTwoValue);
         result.innerHTML = addedResult;
     }else{
-        alert("Input Tidak Sesuai");
+        alert('Input Tidak Valid');
     }
- 
 });
 
-function validation(inputOne, inputTwo){
+const validation = (inputOne, inputTwo) =>{
     if((inputOne == false) || (inputTwo == false) || (isNaN(inputOne)) || (isNaN(inputTwo))){
         return false;     
     }else{
